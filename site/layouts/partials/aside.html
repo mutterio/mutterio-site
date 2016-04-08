@@ -1,0 +1,38 @@
+
+<section id="team">
+<aside class="bg-dark">
+  <div class="container ">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>{{ with .Site.Params.aside.headline }}{{ . }}{{ end }}</h2>
+        <p>
+          Mutter is passionate about open source
+        </p>
+        <p>
+          We are a group of software professionals that have built
+          everything from small websites to subsystems that run on
+          top 10 ecommerce sites.
+      </p>
+      <p>
+        We are a lean, modern development shop focused on
+        delivering on time and on budget.
+      </p>
+
+      </div>
+      <div class="col-md-6">
+        <ul class="style1">
+          {{ range .Site.Params.team }}
+          <li>
+            <a href="#" class="image image-left"><img src="{{ .img }}" alt=""></a>
+            <h3>{{ .name }}</h3>
+            <span><a href="#">{{ .title }}</a></span>
+            {{ partial "social.html" . }}
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</aside>
+</section>

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+currDir=`pwd`
+output="$currDir/output"
+echo "PWD::: $currDir"
+hugo server \
+  --watch=true \
+  --source=./site \
+  --disableRSS=true \
+  --destination=$output

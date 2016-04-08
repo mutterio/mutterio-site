@@ -1,0 +1,7 @@
+{{ $paginator := .Paginate (where .Data.Pages "Type" "!=" "page") }}
+
+{{ range .Paginator.Pages }}
+  {{ partial "preview_post.html" . }}
+{{ end }}
+
+{{ partial "pagination.html" . }}

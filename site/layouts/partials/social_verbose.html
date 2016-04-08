@@ -1,0 +1,12 @@
+<ul class="list-inline social-buttons ">
+   {{ range .social }}
+   <li class="text-left">
+    <a href="{{ .link | safeURL  }}">
+      <i class="fa {{ .icon }}"></i>
+    </a>
+
+      {{ .display }}
+
+  </li>
+   {{ end }}
+</ul>

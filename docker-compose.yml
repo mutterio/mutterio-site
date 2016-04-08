@@ -1,0 +1,14 @@
+hugo:
+  restart: always
+  image: mutterio/mini-hugo
+  volumes:
+    - ./site/:/src
+    - ./output/:/src/public
+  ports:
+    - "1313:1313"
+  environment:
+    - HUGO_WATCH=false
+    - HUGO_REFRESH_TIME=5
+    - HUGO_BASEURL=http://dockerhost:1313
+  # command: ["hugo", "server", "-w", "-t", "bootie-docs", "-s", "/src"]
+  command: ["hugo","server","--bind=0.0.0.0", "--watch=true", ""]

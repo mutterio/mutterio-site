@@ -1,0 +1,10 @@
+#!/bin/sh
+
+currDir=`pwd`
+output="$currDir/output"
+rm -rf $output
+
+hugo \
+  --source=./site \
+  --disableRSS=true \
+  --destination=$output

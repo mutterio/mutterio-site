@@ -1,0 +1,8 @@
+#!/bin/sh
+mkdir -p ./logs
+
+hugo server \
+--bind=0.0.0.0 \
+--watch=true
+--log=true
+--logFile="./logs/hugo.log"
