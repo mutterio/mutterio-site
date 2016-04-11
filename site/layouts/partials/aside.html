@@ -23,9 +23,9 @@
         <ul class="style1">
           {{ range .Site.Params.team }}
           <li>
-            <a href="#" class="image image-left"><img src="{{ .img }}" alt=""></a>
+            <a class="image image-left"><img src="{{ .img }}" alt=""></a>
             <h3>{{ .name }}</h3>
-            <span><a href="#">{{ .title }}</a></span>
+            <span> {{ .title }}</span>
             {{ partial "social.html" . }}
           </li>
           {{ end }}

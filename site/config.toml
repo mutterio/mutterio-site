@@ -32,6 +32,9 @@ googleAnalytics="UA-53412949-1"
   # The path must be relative to the static folder
   favicon = "favicon.ico"
 
+[blackfriday]
+   plainIDAnchors = true
+   hrefTargetBlank = true
 
   # Navigation
   [params.navigation]
@@ -47,6 +50,11 @@ googleAnalytics="UA-53412949-1"
 
   [params.footer]
     copywright = "© mutter.io. All rights reserved."
+
+	[[params.footer.social]]
+    icon = "fa-github"
+    link = "//github.com/mutterio"
+    display = "mutter.io"
 
   [[params.footer.social]]
     icon = "fa-twitter"
@@ -84,7 +92,10 @@ googleAnalytics="UA-53412949-1"
     name= "Jeremy Patton"
     title = "Founder and Managing Director"
     img ="/imgs/team/jp.jpg"
-    [[params.team.social]]
+		[[params.team.social]]
+      icon = "fa-github"
+      link = "//github.com/pattonjp"
+		[[params.team.social]]
       icon = "fa-twitter"
       link = "//twitter.com/pattonjp"
     [[params.team.social]]
@@ -109,7 +120,7 @@ googleAnalytics="UA-53412949-1"
     [[params.services.list]]
       icon = "fa-cog"
       title = "Modernize Solutions"
-      description = "When you find a legacy system is not keeping up with your business Our consultants are experts at giving you a path to growth"
+      description = "When you find a legacy system is not keeping up with your business our consultants are experts at showing you a path to growth"
 
     [[params.services.list]]
       icon = "fa-cloud"

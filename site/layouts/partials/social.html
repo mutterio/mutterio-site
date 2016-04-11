@@ -1,7 +1,7 @@
 <ul class="list-inline social-buttons">
    {{ range .social }}
    <li>
-    <a href="{{ .link | safeURL }}">
+    <a target="_blank" href="{{ .link | safeURL }}">
       <i class="fa {{ .icon }}"></i>
     </a>
 
